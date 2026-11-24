@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -13,13 +14,15 @@ h1 { font-size: clamp(1.6rem, 5vw, 2.5rem); margin: 0; }
 .hero p { margin: .35rem 0 0; color: #e0eee5; }
 nav { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1rem 0; }
 nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; border-radius: .55rem; background: #e1eadf; color: #184536; font-weight: 700; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); gap: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); gap: 1.5rem; }
 section { background: #fff; border: 1px solid #dddcd3; border-radius: .85rem; padding: 1rem; scroll-margin-top: 1rem; }
 section:target { outline: 2px solid #42735e; }
 h2 { margin: 0; font-size: 1.25rem; }
 section p { margin: .15rem 0 .6rem; color: #526158; }
 ul { list-style: none; padding: 0; margin: 0; }
-li { display: grid; grid-template-columns: 7ch 1fr; gap: .85rem; padding: .6rem 0; border-top: 1px solid #e8e8e0; }
+ul { display: grid; grid-template-columns: max-content minmax(0, 1fr); }
+li { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; column-gap: clamp(.85rem, 3vw, 1.5rem); padding: .85rem 0; border-top: 1px solid #e8e8e0; }
+li > span { overflow-wrap: anywhere; }
 time { color: #35604e; white-space: nowrap; font-variant-numeric: tabular-nums; }
 </style>
 </head>
@@ -27,8 +30,8 @@ time { color: #35604e; white-space: nowrap; font-variant-numeric: tabular-nums; 
 <header class="hero"><h1>高雄分公司員工午餐菜單</h1><p>2026 年 11 月 23 日至 12 月 18 日</p></header>
 <nav aria-label="依週次查看"><a href="#w48">W48</a><a href="#w49">W49</a><a href="#w50">W50</a><a href="#w51">W51</a></nav>
 <div class="grid"><section id="w48"><header><h2>黃金森林</h2><p>W48・11/23–11/27</p></header><ul><li><time datetime="2026-11-23">11/23（一）</time><span>鯖魚拼蝦捲</span></li><li><time datetime="2026-11-24">11/24（二）</time><span>黑胡椒雞腿丁</span></li><li><time datetime="2026-11-25">11/25（三）</time><span>日式豬肉炒烏龍</span></li><li><time datetime="2026-11-26">11/26（四）</time><span>烤無骨雞腿排</span></li><li><time datetime="2026-11-27">11/27（五）</time><span>香酥炸雞腿</span></li></ul></section>
-<section id="w49"><header><h2>綠葉家</h2><p>W49・11/30–12/4</p></header><ul><li><time datetime="2026-11-30">11/30（一）  </time><span>泰式打拋豬</span></li><li><time datetime="2026-12-01">12/1（二）  </time><span>滷香雞腿</span></li><li><time datetime="2026-12-02">12/2（三）  </time><span>健康排骨</span></li><li><time datetime="2026-12-03">12/3（四）  </time><span>舒肥雞丁</span></li><li><time datetime="2026-12-04">12/4（五）  </time><span>挪威鯖魚</span></li></ul></section>
-<section id="w50"><header><h2>誠食坊</h2><p>W50・12/7–12/11</p></header><ul><li><time datetime="2026-12-07">12/7（一）  </time><span>排骨飯/蝦餅(炸)</span></li><li><time datetime="2026-12-08">12/8（二）  </time><span>滷雞腿</span></li><li><time datetime="2026-12-09">12/9（三）  </time><span>滷肉飯/滷蛋</span></li><li><time datetime="2026-12-10">12/10（四）  </time><span>黃芥末魚排/春捲(炸)</span></li><li><time datetime="2026-12-11">12/11（五）  </time><span>千島醬雞排/涼拌豬舌</span></li></ul></section>
-<section id="w51"><header><h2>野餐日</h2><p>W51・12/14–12/18</p></header><ul><li><time datetime="2026-12-14">12/14（一）  </time><span>法式舒肥雞胸</span></li><li><time datetime="2026-12-15">12/15（二）  </time><span>蒜香舒肥雞胸</span></li><li><time datetime="2026-12-16">12/16（三）  </time><span>普羅旺斯雞腿排</span></li><li><time datetime="2026-12-17">12/17（四）  </time><span>黑鹽煙燻舒肥雞胸</span></li><li><time datetime="2026-12-18">12/18（五）  </time><span>日式蔥鹽舒肥雞胸</span></li></ul></section></div>
+<section id="w49"><header><h2>綠葉家</h2><p>W49・11/30–12/4</p></header><ul><li><time datetime="2026-11-30">11/30（一）</time><span>泰式打拋豬</span></li><li><time datetime="2026-12-01">12/1（二）</time><span>滷香雞腿</span></li><li><time datetime="2026-12-02">12/2（三）</time><span>健康排骨</span></li><li><time datetime="2026-12-03">12/3（四）</time><span>舒肥雞丁</span></li><li><time datetime="2026-12-04">12/4（五）</time><span>挪威鯖魚</span></li></ul></section>
+<section id="w50"><header><h2>誠食坊</h2><p>W50・12/7–12/11</p></header><ul><li><time datetime="2026-12-07">12/7（一）</time><span>排骨飯/蝦餅(炸)</span></li><li><time datetime="2026-12-08">12/8（二）</time><span>滷雞腿</span></li><li><time datetime="2026-12-09">12/9（三）</time><span>滷肉飯/滷蛋</span></li><li><time datetime="2026-12-10">12/10（四）</time><span>黃芥末魚排/春捲(炸)</span></li><li><time datetime="2026-12-11">12/11（五）</time><span>千島醬雞排/涼拌豬舌</span></li></ul></section>
+<section id="w51"><header><h2>野餐日</h2><p>W51・12/14–12/18</p></header><ul><li><time datetime="2026-12-14">12/14（一）</time><span>法式舒肥雞胸</span></li><li><time datetime="2026-12-15">12/15（二）</time><span>蒜香舒肥雞胸</span></li><li><time datetime="2026-12-16">12/16（三）</time><span>普羅旺斯雞腿排</span></li><li><time datetime="2026-12-17">12/17（四）</time><span>黑鹽煙燻舒肥雞胸</span></li><li><time datetime="2026-12-18">12/18（五）</time><span>日式蔥鹽舒肥雞胸</span></li></ul></section></div>
 </main></body>
 </html>
